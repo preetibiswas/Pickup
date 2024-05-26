@@ -4,6 +4,7 @@ import React from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Feather from 'react-native-vector-icons/Feather';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import CallActionbox from '../../Component/CallActionbox';
 export default function CallingScreen() {
   return (
     <View style={styles.screen}>
@@ -12,7 +13,7 @@ export default function CallingScreen() {
         <Text style={styles.name}>Alex</Text>
         <Text style={styles.phoneNum}>ringing +7906619413</Text>
       </View>
-      <View style={styles.bottomContainer}>
+      {/* <View style={styles.bottomContainer}>
         <View style={styles.iconBtn}>
           <Ionicons name="camera-reverse" size={30} color="white" />
         </View>
@@ -25,7 +26,8 @@ export default function CallingScreen() {
         <View style={[styles.iconBtn, {backgroundColor: 'red '}]}>
           <MaterialIcons name="call-end" size={30} color="white" />
         </View>
-      </View>
+      </View> */}
+      <CallActionbox />
     </View>
   );
 }
@@ -52,20 +54,5 @@ const styles = StyleSheet.create({
   phoneNum: {
     fontSize: 25,
     color: 'white',
-  },
-  bottomContainer: {
-    padding: 20,
-    backgroundColor: '#333333',
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-
-    borderTopLeftRadius: 15,
-    borderTopRightRadius: 15,
-  },
-  iconBtn: {
-    backgroundColor: '#4a4a4a',
-    padding: 10,
-    borderRadius: 50,
-    margin: 10,
   },
 });
